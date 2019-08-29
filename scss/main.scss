@@ -1,7 +1,7 @@
-@import "components/_prueba";
+@import "components/nesting";
+@import "components/mixin";
 //Estilos generales del body
 body {
-    background-color: #f4f4f4;
     font-family: 'Work Sans', sans-serif;
     font-size: 15px;
     margin: 0;
