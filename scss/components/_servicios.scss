@@ -1,0 +1,19 @@
+/*Estilos de los servicios*/
+
+#servicios {
+    margin-top: 20px;
+    width: 80%;
+    .servicio {
+        float: left;
+        padding: 10px 17px;
+        text-align: center;
+        width: 30%;
+    }
+    img {
+        height: 90px;
+        width: auto;
+    }
+    p {
+        text-align: justify;
+    }
+}

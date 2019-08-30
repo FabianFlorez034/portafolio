@@ -1,0 +1,34 @@
+/*Estilos sección Boletín*/
+
+#section-boletin {
+    background: #24282b;
+    border-top: 1.5px solid #1293d4;
+    border-bottom: 1.5px solid #1293d4;
+    color: #fff;
+    text-align: center;
+}
+
+h2,
+form {
+    float: left;
+}
+
+h2 {
+    margin-left: 145px;
+}
+
+form {
+    margin-top: 13px;
+    margin-left: 20px;
+}
+
+input[type="email"] {
+    height: 22px;
+    margin-right: 15px;
+    padding: 4px;
+    width: 270px;
+}
+
+button {
+    @include button;
+}

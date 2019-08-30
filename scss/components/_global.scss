@@ -1,0 +1,17 @@
+//--------Estilos a nivel general-----------
+
+/*Estilos generales del body*/
+
+body {
+    //Se incluye el mixin del body-font
+    @include body-font;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+section {
+    margin: auto;
+    overflow: hidden;
+}

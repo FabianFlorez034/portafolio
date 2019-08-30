@@ -1,9 +1,14 @@
-@import "components/nesting";
-@import "components/mixin";
-//Estilos generales del body
-body {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-}
+    //Mixins y variables
+    @import "components/variables";
+    @import "components/mixin";
+    // Global CSS
+    @import "components/global";
+    //Componets
+    @import "components/header";
+    @import "components/section-principal";
+    @import "components/section-boletin";
+    @import "components/servicios";
+    @import "components/habilidades";
+    @import "components/desarrollador";
+    @import "components/contact";
+    @import "components/footer";

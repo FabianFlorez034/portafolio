@@ -1,5 +1,10 @@
-/*Código reutilizable*/
+//Código reutilizable dado por proveedores externos
+//Font Mixins
+@mixin body-font {
+    font-family: 'Work Sans', sans-serif;
+}
 
+//Botón Mixins
 @mixin button {
     background-color: #ff3700;
     border-radius: 6px;
@@ -15,8 +20,4 @@
         color: #fff;
         background-color: #ff0000;
     }
-}
-
-.button {
-    @include button;
 }
