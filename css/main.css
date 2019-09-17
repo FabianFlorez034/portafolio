@@ -8,7 +8,8 @@ body {
 }
 
 header,
-section {
+section,
+.skills {
   margin: auto;
   overflow: hidden;
 }
@@ -94,29 +95,24 @@ header li {
   color: #fff;
   text-align: center;
 }
-
-h2,
-form {
+#section-boletin h2,
+#section-boletin form {
   float: left;
 }
-
-h2 {
+#section-boletin h2 {
   margin-left: 145px;
 }
-
-form {
+#section-boletin form {
   margin-top: 13px;
   margin-left: 20px;
 }
-
-input[type=email] {
+#section-boletin input[type=email] {
   height: 22px;
   margin-right: 15px;
   padding: 4px;
   width: 270px;
 }
-
-button {
+#section-boletin button {
   background-color: #ff3700;
   border-radius: 6px;
   border: 1.5px solid #1293d4;
@@ -128,7 +124,7 @@ button {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 3px rgba(0, 0, 0, 0.2);
 }
-button:hover {
+#section-boletin button:hover {
   color: #fff;
   background-color: #ff0000;
 }
@@ -150,4 +146,219 @@ button:hover {
 }
 #servicios p {
   text-align: justify;
+}
+
+/*Estilos de los skills*/
+#habilidades {
+  background-color: #24282b;
+  border-top: 2.5px solid #1293d4;
+  border-bottom: 2.5px solid #1293d4;
+  color: #fff;
+  margin-top: 20px;
+  padding: 100px 0;
+}
+#habilidades h2 {
+  text-align: center;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  width: 80%;
+}
+
+.circular-progress {
+  margin: 0 56px 0px 21px;
+  position: relative;
+}
+.circular-progress, .circular-progress:before, .circular-progress:after {
+  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
+}
+.circular-progress:before, .circular-progress:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+.circular-progress:before {
+  padding: 0.5em;
+  box-sizing: border-box;
+  font-size: 2rem;
+  line-height: 8rem;
+}
+.circular-progress:after {
+  line-height: 13rem;
+}
+
+.html {
+  transform: rotate(176.4deg);
+  background: linear-gradient(0deg, orange 50%, rgba(255, 165, 0, 0.2) 50%);
+}
+.html:before, .html:after {
+  color: orange;
+}
+.html:before {
+  content: "98%";
+  background: #24282b content-box;
+  transform: rotate(-176.4deg);
+}
+.html:after {
+  content: "html5";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-176.4deg);
+  text-transform: uppercase;
+}
+
+.css {
+  transform: rotate(171deg);
+  background: linear-gradient(0deg, #1a1aff 50%, rgba(26, 26, 255, 0.2) 50%);
+}
+.css:before, .css:after {
+  color: #1a1aff;
+}
+.css:before {
+  content: "95%";
+  background: #24282b content-box;
+  transform: rotate(-171deg);
+}
+.css:after {
+  content: "css";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-171deg);
+  text-transform: uppercase;
+}
+
+.java {
+  transform: rotate(126deg);
+  background: linear-gradient(0deg, gray 50%, rgba(128, 128, 128, 0.2) 50%);
+}
+.java:before, .java:after {
+  color: gray;
+}
+.java:before {
+  content: "70%";
+  background: #24282b content-box;
+  transform: rotate(-126deg);
+}
+.java:after {
+  content: "java";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-126deg);
+  text-transform: uppercase;
+}
+
+.js {
+  transform: rotate(108deg);
+  background: linear-gradient(0deg, yellow 50%, rgba(255, 255, 0, 0.2) 50%);
+}
+.js:before, .js:after {
+  color: yellow;
+}
+.js:before {
+  content: "60%";
+  background: #24282b content-box;
+  transform: rotate(-108deg);
+}
+.js:after {
+  content: "javascript";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-108deg);
+  text-transform: uppercase;
+}
+
+.sass {
+  transform: rotate(162deg);
+  background: linear-gradient(0deg, #e600e6 50%, rgba(230, 0, 230, 0.2) 50%);
+}
+.sass:before, .sass:after {
+  color: #e600e6;
+}
+.sass:before {
+  content: "90%";
+  background: #24282b content-box;
+  transform: rotate(-162deg);
+}
+.sass:after {
+  content: "sass";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-162deg);
+  text-transform: uppercase;
+}
+
+.git {
+  transform: rotate(176.4deg);
+  background: linear-gradient(0deg, #00e600 50%, rgba(0, 230, 0, 0.2) 50%);
+}
+.git:before, .git:after {
+  color: #00e600;
+}
+.git:before {
+  content: "98%";
+  background: #24282b content-box;
+  transform: rotate(-176.4deg);
+}
+.git:after {
+  content: "git";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-176.4deg);
+  text-transform: uppercase;
+}
+
+.angular {
+  transform: rotate(72deg);
+  background: linear-gradient(0deg, red 50%, rgba(255, 0, 0, 0.2) 50%);
+}
+.angular:before, .angular:after {
+  color: red;
+}
+.angular:before {
+  content: "40%";
+  background: #24282b content-box;
+  transform: rotate(-72deg);
+}
+.angular:after {
+  content: "angular";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-72deg);
+  text-transform: uppercase;
+}
+
+.oracle {
+  transform: rotate(144deg);
+  background: linear-gradient(0deg, rgba(173, 102, 255, 0.808) 50%, rgba(173, 102, 255, 0.2) 50%);
+}
+.oracle:before, .oracle:after {
+  color: rgba(173, 102, 255, 0.808);
+}
+.oracle:before {
+  content: "80%";
+  background: #24282b content-box;
+  transform: rotate(-144deg);
+}
+.oracle:after {
+  content: "Oracle 12C";
+  background: linear-gradient(transparent 50%, #24282b 50%);
+  color: #fff;
+  transform: scale(1.1) rotate(-144deg);
+  text-transform: uppercase;
+}
+
+/*Estilos del footer*/
+footer {
+  background-color: #1293d4;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: center;
 }

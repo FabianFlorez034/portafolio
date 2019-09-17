@@ -1,0 +1,107 @@
+/*Estilos de los skills*/
+
+#habilidades {
+    background-color: $colorDark;
+    border-top: 2.5px solid #1293d4;
+    border-bottom: 2.5px solid #1293d4;
+    color: #fff;
+    margin-top: 20px;
+    padding: 100px 0;
+    h2 {
+        text-align: center;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    width: 80%;
+}
+
+.circular-progress {
+    &,
+    &:before,
+    &:after {
+        border-radius: 50%;
+        height: 12rem;
+        width: 12rem;
+    }
+    margin: 0 56px 0px 21px;
+    position: relative;
+    &:before,
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+    &:before {
+        padding: .5em;
+        box-sizing: border-box;
+        font-size: 2rem;
+        line-height: 8rem;
+    }
+    &:after {
+        line-height: 13rem;
+    }
+}
+
+@function progress($percent) {
+    $deg: $percent/100*180;
+    @return #{$deg}deg;
+}
+
+@mixin circular-progress($percent, $skill, $color, $bgcolor) {
+    $progress: progress($percent);
+    transform: rotate($progress);
+    background: linear-gradient( 0deg, $color 50%, rgba($color, .2) 50%);
+    &:before,
+    &:after {
+        color: $color;
+    }
+    &:before {
+        content: "#{$percent}%";
+        background: $bgcolor content-box;
+        transform: rotate(-#{$progress});
+    }
+    &:after {
+        content: "#{$skill}";
+        background: linear-gradient( transparent 50%, $bgcolor 50%);
+        color: #fff;
+        transform: scale(1.1) rotate(-#{$progress});
+        text-transform: uppercase;
+    }
+}
+
+.html {
+    @include circular-progress( 98, html5, orange, $colorDark)
+}
+
+.css {
+    @include circular-progress( 95, css, lighten(blue, 5), $colorDark)
+}
+
+.java {
+    @include circular-progress( 70, java, gray, $colorDark)
+}
+
+.js {
+    @include circular-progress( 60, javascript, yellow, $colorDark)
+}
+
+.sass {
+    @include circular-progress( 90, sass, lighten(purple, 20), $colorDark)
+}
+
+.git {
+    @include circular-progress( 98, git, lighten(green, 20), $colorDark)
+}
+
+.angular {
+    @include circular-progress( 40, angular, red, $colorDark)
+}
+
+.oracle {
+    @include circular-progress( 80, 'Oracle 12C', lighten(rgba(119, 0, 255, 0.808), 20), $colorDark)
+}
